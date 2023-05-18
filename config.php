@@ -16,3 +16,4 @@ $frontendurl = $webroot."frontend/view".DIRECTORY_SEPARATOR;
 $docroot = $_SERVER['DOCUMENT_ROOT'];
 $datasource = $docroot.DIRECTORY_SEPARATOR."datasource".DIRECTORY_SEPARATOR;
 $partials = $docroot.DIRECTORY_SEPARATOR.'partials'.DIRECTORY_SEPARATOR;
+$datasource_driver = "JSON"; 

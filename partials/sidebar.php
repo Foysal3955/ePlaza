@@ -44,7 +44,7 @@
  
         foreach($navData->$key as $navitem){
             echo '<li class="nav-item">
-            <a href="index.html" class="nav-link active">
+            <a href="slider_index.php" class="nav-link active">
                 <i class="icon-home4"></i>
                 <span>
                     '.$navitem.'
@@ -56,7 +56,7 @@
 
 
 
-
+ 
 
 
 

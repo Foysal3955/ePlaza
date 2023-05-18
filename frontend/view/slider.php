@@ -1,33 +1,35 @@
 <?php
-$slider1 =[
-     'src'=>'../view/Samsung/Samsung-Galaxy-S23-Ultra.jpg',
-     'alt'=>'Slider 1 alter',
-     'title'=>'Frist slide label',
-     'caption'=>'Some representative placeholder content for the first slide.'
-];
-$slider2 =[
-    'src'=>'../view/Samsung/Samsung-Galaxy-Z-Flip4.jpg',
-    'alt'=>'Slider 2 alter',
-    'title'=>'Second slide label',
-    'caption'=>'Some representative placeholder content for the secound slide.'
-];
-$slider3 =[
-    'src'=>'../view/Samsung/Samsung-Galaxy-A73-5G.jpg',
-    'alt'=>'Slider 3 alter',
-    'title'=>'Third slide label',
-    'caption'=>'Some representative placeholder content for the third slide.'
-];
-// $slider4 =[
-//     'src'=>'',
-//     'alt'=>'Slider 4 alter',
-//     'title'=>'Fourth slide label',
-//     'caption'=>'Some representative placeholder content for the fourth slide.'
+// $slider1 =[
+    //  'src'=>'../view/Samsung/Samsung-Galaxy-S23-Ultra.jpg',
+    //  'alt'=>'Slider 1 alter',
+    //  'title'=>'Frist slide label',
+    //  'caption'=>'Some representative placeholder content for the first slide.'
 // ];
+// $slider2 =[
+    // 'src'=>'../view/Samsung/Samsung-Galaxy-Z-Flip4.jpg',
+    // 'alt'=>'Slider 2 alter',
+    // 'title'=>'Second slide label',
+    // 'caption'=>'Some representative placeholder content for the secound slide.'
+// ];
+// $slider3 =[
+    // 'src'=>'../view/Samsung/Samsung-Galaxy-A73-5G.jpg',
+    // 'alt'=>'Slider 3 alter',
+    // 'title'=>'Third slide label',
+    // 'caption'=>'Some representative placeholder content for the third slide.'
+// ];
+// $slider4 =[
+    // 'src'=>'',
+    // 'alt'=>'Slider 4 alter',
+    // 'title'=>'Fourth slide label',
+    // 'caption'=>'Some representative placeholder content for the fourth slide.'
+// ];
+// 
+// 
+// $slides = [$slider1,$slider2,$slider3];
 
-
-$slides = [$slider1,$slider2,$slider3];
-
-
+$jsonString = '../datasourcefrontend/slideritems.json';
+$dataSlides = file_get_contents($jsonString);
+$slides = json_decode($dataSlides);
 ?>
 
 
@@ -80,11 +82,16 @@ $slides = [$slider1,$slider2,$slider3];
       
 ?>
     <div class="carousel-item <?=$active?>">
-      <img src="<?=$slide['src']?>" class="d-block w-100" alt="<?=$slide['alt']?>">
-      <div class="carousel-caption d-none d-md-block">
-        <h5><?=$slide['title']?></h5>
-        <p><?=$slide['caption']?></p>
-      </div>
+      
+      
+      
+      
+      
+      <img src="<?=$slide->src?>" class="d-block w-100" alt="<?=$slide->alt?>">
+        <div class="carousel-caption d-none d-md-block">
+        <h5><?=$slide->title?></h5>
+        <p><?=$slide->caption?></p>
+        </div>
     </div>
 <?php
  endforeach

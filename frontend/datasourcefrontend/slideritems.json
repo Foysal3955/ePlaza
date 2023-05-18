@@ -1,0 +1,38 @@
+[
+    { 
+        "src":"../view/Samsung/Samsung-Galaxy-S23-Ultra.jpg",
+        "alt":"Slider 1 alter",
+        "title":"Frist slide label",
+        "caption":"Some representative placeholder content for the first slide."
+    },
+    {
+        "src":"../view/Samsung/Samsung-Galaxy-Z-Flip4.jpg",
+        "alt":"Slider 2 alter",
+        "title":"Secound slide label",
+        "caption":"Some representative placeholder content for the first slide."
+    },
+    {
+
+        "src":"../view/Samsung/Samsung-Galaxy-A73-5G.jpg",
+        "alt":"Slider 3 alter",
+        "title":"Third slide label",
+        "caption":"Some representative placeholder content for the third slide."
+    },
+    {
+        "src":"../view/Samsung/Samsung-Galaxy-A73-5G.jpg",
+        "alt":"Slider 3 alter",
+        "title":"Third slide label",
+        "caption":"Some representative placeholder content for the third slide."
+    }
+    
+   
+   
+   
+   
+   
+   
+   
+       
+   
+   
+]
