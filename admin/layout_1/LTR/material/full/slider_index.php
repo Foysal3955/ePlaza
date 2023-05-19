@@ -97,13 +97,13 @@ $slides = json_decode($dataSlides);
             //  }
   ?>
 				<tr>
-					<td title = '<?=$slide->uuid?>'><?=$key+1?></td>
+					<td title = '<?=$slide->id?>'><?=$key+1?></td>
 					<td><?=$slide->title?></td>
 					<td><img src="<?=$slide->src?>" style = "width:100px;height:100px" ></td>
 					<td><?=$slide->alt?></td>
                     <td><?=$slide->caption?></td>
-                    <!-- <td> <a href="slider_show.php?slideIndex=<?=$key?>">Show</a>  | Edit | Delete | Active/InActive | Copy</td> -->
-                    <td> <a href="slider_show.php?id = <?=$slide->id?>">Show</a>  | Edit | Delete | Active/InActive | Copy</td>
+                    <!-- <td> <a href="slider_show.php?slideIndex=<?$key?>">Show</a>  | Edit | Delete | Active/InActive | Copy</td> -->
+                    <td> <a href="slider_show.php?id=<?=$slide->id?>">Show</a>  | Edit | Delete | Active/InActive | Copy</td>
 				</tr>
 <?php
 endforeach;
