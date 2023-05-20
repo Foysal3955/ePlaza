@@ -89,14 +89,14 @@ $slides = json_decode($dataSlides);
 					<div class="col-sm-6 col-xl-3">
 						<div class="card">
 							<div class="card-img-actions mx-1 mt-1">
-								<img class="card-img img-fluid" src="<?=$slide->src?>" alt="<?=$slide->alt?>">
+								<img class="card-img img-fluid" src="<?=$slide->src?>"style="height:250px" alt="<?=$slide->alt?>">
 								<div class="card-img-actions-overlay card-img">
 									<!-- <a href="../../../../global_assets/images/placeholders/placeholder.jpg" class="btn btn-outline bg-white text-white -->
                                      <!-- border-white border-2 btn-icon rounded-round" data-popup="lightbox" rel="group"> -->
 										<!-- <i class="icon-plus3"></i> -->
 									<!-- </a> -->
 
-									<a href="#" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round ml-2">
+									<a href="slider_show.php?id=<?=$slide->id?>" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round ml-2">
 										<i class="icon-eye"></i>
 									</a>
 

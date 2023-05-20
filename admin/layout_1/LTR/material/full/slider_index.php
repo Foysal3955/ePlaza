@@ -50,6 +50,13 @@ $slides = json_decode($dataSlides);
       <ul>
         <li class =""> <a href="slider_index_grid.php"> Grid View</a></li>
         <li class =""> <a href="slider_index.php">List View</a></li>
+		<!-- <a href="slider_index.php" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round "> -->
+	        <!-- <i class="icon-list"></i> -->
+<!-- 			 -->
+        <!-- </a> -->
+        <!-- <a href="slider_index_grid.php" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round "> -->
+           <!-- <i class="icon-grid"></i> -->
+        <!-- </a> -->
      </ul>
      
      <a href="slider_create.php" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
@@ -103,7 +110,28 @@ $slides = json_decode($dataSlides);
 					<td><?=$slide->alt?></td>
                     <td><?=$slide->caption?></td>
                     <!-- <td> <a href="slider_show.php?slideIndex=<?$key?>">Show</a>  | Edit | Delete | Active/InActive | Copy</td> -->
-                    <td> <a href="slider_show.php?id=<?=$slide->id?>">Show</a>  | Edit | Delete | Active/InActive | Copy</td>
+                    <td> 
+					 <a href="slider_show.php?id=<?=$slide->id?>" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
+	                      <i class="icon-eye"></i>
+					
+                           </a>
+						   <a href="" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
+	                      <i class="icon-pencil5"></i>
+                           </a>
+						   <form action ="slider_delete.php" method ="post" class="d-inline-block" >
+						   <!-- <a href="slider_delete.php?id=" > -->
+	                       <!-- <i class="icon-trash"></i> -->
+                           
+						   <button type="submit"  class="icon-trash btn-icon rounded-round p-2 btn-outline-primary "></button>
+						   <input type="hidden" name="id" value="<?=$slide->id?>" />
+						   </form>
+						   <a href="" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
+	                      <i class="icon-blocked"></i>
+                           </a>
+						   <a href="" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
+	                      <i class="icon-files-empty"></i>
+                           </a>
+					 </td>
 				</tr>
 <?php
 endforeach;

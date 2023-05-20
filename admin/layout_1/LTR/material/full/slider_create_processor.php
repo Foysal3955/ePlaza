@@ -9,15 +9,15 @@
  * store : a json file 
  * give apporpriate massge to user  
  */
-$id = "11";
-$uuid = "hgsdf";
+//$id = "11";
+//$uuid = "hgsdf";
 $src = $_GET['url'];
 $alt = $_GET['alt'];
 $title = $_GET['title'];
 $caption = $_GET['caption'];
  $slide = [
-          'id'=>$id,
-          'uuid'=>$uuid,
+          
+          'uuid'=>uniqid(),
           'src'=>$src,
           'alt'=>$alt,
           'title'=>$title,
@@ -27,6 +27,18 @@ $caption = $_GET['caption'];
 
 $dataSlides = file_get_contents($datasource.'slider.json');
 $slides = json_decode($dataSlides); 
+//finding unique ids 
+foreach($slides as $aslide){
+  $ids[] = $aslide->id;
+
+}
+
+sort($ids);
+$lastIndex = (count($ids)-1);
+$highestId = $ids[$lastIndex];
+$currentUniqueId = $highestId+1;
+
+$slide['id'] = $currentUniqueId;
 
 $slides [] = (object) $slide;
 $data_slide = json_encode($slides); 

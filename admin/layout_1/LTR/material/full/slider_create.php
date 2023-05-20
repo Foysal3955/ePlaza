@@ -50,25 +50,25 @@
 			                	<form action="slider_create_processor.php" method="get">
 									<div class="form-group">
 										<label>Title:</label>
-										<input name="title" type="text" class="form-control" placeholder="Eugene Kopyov">
+										<input name="title" type="text" class="form-control" placeholder="Write a title here">
 									</div>
 
 									<div class="form-group">
 										<label>Caption:</label>
-										<input name="caption" type="text" class="form-control" placeholder="Your strong password">
+										<input name="caption" type="text" class="form-control" placeholder="Write a caption here">
 									</div>
 
 									<div class="form-group">
 										<label>Alt:</label>
-										<textarea name="alt" rows="3" cols="3" class="form-control" placeholder="Enter your message here"></textarea>
+										<input name="alt"type="text" class="form-control" placeholder="Write Alt here"></input>
 									</div>
                                     <div class="form-group">
 	                                    <label>URL:</label>
-                                        <input name="url" type="text" class="form-control" placeholder="Your strong password">
+                                        <input name="url" type="url" class="form-control" placeholder="Enter a valid URL">
                                     </div>
                                     <div class="form-group">
 	                                    <label>Upload a picture:</label>
-	                                    <input name="upload" type="text" class="form-control" placeholder="Your strong password">
+	                                    <input name="upload" type="text" class="form-control" placeholder="Picture">
                                     </div>
 
 									<div class="d-flex justify-content-start align-items-center">
