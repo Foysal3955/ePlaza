@@ -78,7 +78,7 @@ foreach($slides as $key=>$aslide){
 							</div>
 
 			                <div class="card-body">
-			                	<form action="slider_edit_processor.php" method="post">
+			                	<form action="slider_edit_processor.php" method="post" enctype="multipart/form-data">
 
                                 <input name="id" type="text" class="form-control"  value="<?=$aslide->id?>" />
                                 <input name="uuid" type="text" class="form-control"  value="<?=$aslide->uuid?>" />
@@ -97,13 +97,15 @@ foreach($slides as $key=>$aslide){
 										<label>Alt:</label>
 										<input name="alt"type="text" class="form-control" placeholder="Write Alt here" value="<?=$aslide->alt?>"/></input>
 									</div>
-                                    <div class="form-group">
-	                                    <label>URL:</label>
-                                        <input name="url" type="text" class="form-control" placeholder="Enter a valid URL" value="<?=$aslide->src?>"/>
-                                    </div>
+                                    <!-- <div class="form-group"> -->
+	                                    <!-- <label>URL:</label> -->
+                                        <!-- <input name="url" type="text" class="form-control" placeholder="Enter a valid URL" value="<?=$aslide->src?>"/> -->
+                                    <!-- </div> -->
                                     <div class="form-group">
 	                                    <label>Upload a picture:</label>
-	                                    <input name="upload" type="text" class="form-control" placeholder="Picture">
+	                                    <input name="picture" type="file" class="form-control" placeholder="Choose a Picture">
+										<img src= <?= $webroot."upload/".$aslide->src?> style = "width:100px;height:100px" >
+										<input name="old_picture" type="text" class="form-control"  value="<?=$aslide->src?>" />
                                     </div>
 
 									<div class="d-flex justify-content-start align-items-center">

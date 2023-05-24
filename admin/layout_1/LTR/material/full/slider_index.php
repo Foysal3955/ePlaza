@@ -81,10 +81,10 @@ endif
      <a href="#" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
 	    <i class="icon-trash"></i>
      </a>
-     <a href="#" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
+     <a href="slider_download_pdf.php" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
 	    <i class="icon-file-plus2"></i>
       </a>
-      <a href="#" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
+      <a href="slider_index_print.php" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
 	     <i class="icon-printer2"></i>
       </a>
 
@@ -123,7 +123,7 @@ endif
 					<td title = "<?=$slide->id?>"><?=$key+1?></td>
 					<td><?=$slide->title?></td>
 					<!-- <td><img src="<?=$slide->src?>" style = "width:100px;height:100px" ></td> -->
-					<td><img src= <?= $webroot."upload/".$slide->src?> style = "width:100px;height:100px" ></td>
+					<td><img src= <?= $webroot."upload/".$slide->src?> style = "width:100px;height:90px" ></td>
 					<td><?=$slide->alt?></td>
                     <td><?=$slide->caption?></td>
                     <!-- <td> <a href="slider_show.php?slideIndex=<?$key?>">Show</a>  | Edit | Delete | Active/InActive | Copy</td> -->

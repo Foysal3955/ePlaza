@@ -4,6 +4,8 @@ session_start();
 ini_set ('display errors','on');
 error_reporting(E_ALL);
 
+include_once($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR."vendor".DIRECTORY_SEPARATOR."autoload.php");
+
 function d($var){
     echo "<pre>";
     print_r($var);
@@ -48,8 +50,10 @@ function upload($target, $dastination){
 }
 
 $webroot = "http://class_15.test".DIRECTORY_SEPARATOR;
+
 $adminurl = $webroot."admin/layout_1/LTR/material/full".DIRECTORY_SEPARATOR; 
 $frontendurl = $webroot."frontend/view".DIRECTORY_SEPARATOR;
+//$docroot = $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR;
 $docroot = $_SERVER['DOCUMENT_ROOT'];
 $datasource = $docroot.DIRECTORY_SEPARATOR."datasource".DIRECTORY_SEPARATOR;
 $partials = $docroot.DIRECTORY_SEPARATOR.'partials'.DIRECTORY_SEPARATOR;
