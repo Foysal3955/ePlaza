@@ -1,1 +1,90 @@
-[{"id":1,"uuid":"aa1","src":"\/frontend\/view\/Samsung\/Samsung-Galaxy-S23-Ultra.jpg","alt":"Slider 1 alter","title":"Frist slide label","caption":"Some representative placeholder content for the first slide."},{"id":2,"uuid":"aa2","src":"\/frontend\/view\/Samsung\/Samsung-Galaxy-Z-Flip4.jpg","alt":"Slider 2 alter","title":"Secound slide label","caption":"Some representative placeholder content for the first slide."},{"id":3,"uuid":"aa3","src":"\/frontend\/view\/Samsung\/Samsung-Galaxy-A73-5G.jpg","alt":"Slider 3 alter","title":"Third slide label","caption":"Some representative placeholder content for the third slide."},{"id":4,"uuid":"aa4","src":"\/frontend\/view\/Samsung\/Samsung-Galaxy-A73-5G.jpg","alt":"Slider 3 alter","title":"Third slide label","caption":"Some representative placeholder content for the third slide."},{"id":5,"uuid":"aa5","src":"\/frontend\/view\/Samsung\/Samsung-Galaxy-A34-5G.jpg","alt":"Slider 3 alter","title":"Third slide label","caption":"Some representative placeholder content for the third slide."}]
+[
+    {
+        "id": 1,
+        "uuid": "aa1",
+        "src": "\/frontend\/view\/Samsung\/Samsung-Galaxy-S23-Ultra.jpg",
+        "alt": "Slider 1 alter",
+        "title": "Frist slide label",
+        "caption": "Some representative placeholder content for the first slide."
+    },
+    {
+        "id": 2,
+        "uuid": "aa2",
+        "src": "\/frontend\/view\/Samsung\/Samsung-Galaxy-Z-Flip4.jpg",
+        "alt": "Slider 2 alter",
+        "title": "Secound slide label",
+        "caption": "Some representative placeholder content for the first slide."
+    },
+    {
+        "id": 3,
+        "uuid": "aa3",
+        "src": "\/frontend\/view\/Samsung\/Samsung-Galaxy-A73-5G.jpg",
+        "alt": "Slider 3 alter",
+        "title": "Third slide label",
+        "caption": "Some representative placeholder content for the third slide."
+    },
+    {
+        "id": 4,
+        "uuid": "aa4",
+        "src": "\/frontend\/view\/Samsung\/Samsung-Galaxy-A73-5G.jpg",
+        "alt": "Slider 3 alter",
+        "title": "Third slide label",
+        "caption": "Some representative placeholder content for the third slide."
+    },
+    {
+        "id": 5,
+        "uuid": "aa5",
+        "src": "\/frontend\/view\/Samsung\/Samsung-Galaxy-A34-5G.jpg",
+        "alt": "Slider 3 alter",
+        "title": "Third slide label",
+        "caption": "Some representative placeholder content for the third slide."
+    },
+    {
+        "id": "6",
+        "uuid": "aa6",
+        "src": "\/frontend\/view\/Samsung\/Samsung-Galaxy-A34-5G.jpg",
+        "alt": "Slider 3 alter111",
+        "title": "Third slide label",
+        "caption": "Some representative placeholder content for the third slide."
+    },
+    {
+        "uuid": "646bf971932da",
+        "src": "",
+        "alt": "sadf",
+        "title": "jhsff",
+        "caption": "asdf",
+        "id": 7
+    },
+    {
+        "uuid": "646c5cd55f38b",
+        "src": "Akash-Nub.jpg",
+        "alt": "scscSDC",
+        "title": "Title 6",
+        "caption": "kljiojio",
+        "id": 8
+    },
+    {
+        "uuid": "646c5e1be4d4b",
+        "src": "Akash-Nub.jpg",
+        "alt": "",
+        "title": "",
+        "caption": "",
+        "id": 9
+    },
+    {
+        "uuid": "646c5fa20af33",
+        "src": "646c5fa20ab37_Akash-Nub.jpg",
+        "alt": "",
+        "title": "",
+        "caption": "",
+        "id": 10
+    },
+    {
+        "uuid": "646c615ec6032",
+        "src": "646c615ec4129_Akash-Nub.jpg",
+        "alt": "",
+        "title": "",
+        "caption": "",
+        "id": 11
+    }
+]

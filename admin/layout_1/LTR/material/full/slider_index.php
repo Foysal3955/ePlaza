@@ -36,8 +36,24 @@ $slides = json_decode($dataSlides);
 
                     <!-- Bordered table -->
 <div class="card">
-	<div class="card-header header-elements-inline">
+<?php
+
+//if(array_key_exists('message', $_SESSION) && !empty($_SESSION['message'])):
+$message = flush_session('message');
+	if($message):
+?>
+
+   <div class="alert alert-success" ><?=$message?></div>
+	
+<?php
+endif
+?>
+
+
+
+     <div class="card-header header-elements-inline">
 		<h5 class="card-title">Slides</h5>
+
 		<div class="header-elements">
 			<div class="list-icons">
         		<a class="list-icons-item" data-action="collapse"></a>
@@ -104,20 +120,25 @@ $slides = json_decode($dataSlides);
             //  }
   ?>
 				<tr>
-					<td title = '<?=$slide->id?>'><?=$key+1?></td>
+					<td title = "<?=$slide->id?>"><?=$key+1?></td>
 					<td><?=$slide->title?></td>
-					<td><img src="<?=$slide->src?>" style = "width:100px;height:100px" ></td>
+					<!-- <td><img src="<?=$slide->src?>" style = "width:100px;height:100px" ></td> -->
+					<td><img src= <?= $webroot."upload/".$slide->src?> style = "width:100px;height:100px" ></td>
 					<td><?=$slide->alt?></td>
                     <td><?=$slide->caption?></td>
                     <!-- <td> <a href="slider_show.php?slideIndex=<?$key?>">Show</a>  | Edit | Delete | Active/InActive | Copy</td> -->
                     <td> 
+						<!-- view -->
 					 <a href="slider_show.php?id=<?=$slide->id?>" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
 	                      <i class="icon-eye"></i>
-					
+
                            </a>
-						   <a href="" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
+
+                		 <!--edit  -->
+						   <a href="slider_edit.php?id=<?=$slide->id?>" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
 	                      <i class="icon-pencil5"></i>
                            </a>
+						   <!-- delete -->
 						   <form action ="slider_delete.php" method ="post" class="d-inline-block" >
 						   <!-- <a href="slider_delete.php?id=" > -->
 	                       <!-- <i class="icon-trash"></i> -->
@@ -125,9 +146,13 @@ $slides = json_decode($dataSlides);
 						   <button type="submit"  class="icon-trash btn-icon rounded-round p-2 btn-outline-primary "></button>
 						   <input type="hidden" name="id" value="<?=$slide->id?>" />
 						   </form>
+						   <!-- active /inactive -->
 						   <a href="" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
 	                      <i class="icon-blocked"></i>
                            </a>
+
+                          <!--copy  -->
+
 						   <a href="" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
 	                      <i class="icon-files-empty"></i>
                            </a>

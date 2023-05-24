@@ -100,7 +100,7 @@ $slides = json_decode($dataSlides);
 										<i class="icon-eye"></i>
 									</a>
 
-                                    <a href="#" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round ml-2">
+                                    <a href="slider_edit.php?id=<?=$slide->id?>" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round ml-2">
                                     	<i class="icon-pencil"></i>
                                     </a>
                                     

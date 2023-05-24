@@ -1,4 +1,35 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'config.php') ?>
+<?php
+/**collet the intended ID */
+
+$id = $_GET['id'];
+
+// dd($id);
+
+/**communicate with data source and get the data for that id */
+
+$dataSlides = file_get_contents($datasource.'slider.json');
+$slides = json_decode($dataSlides);
+$slide = null;
+foreach($slides as $key=>$aslide){
+    if($aslide->id == $id){
+        $slide = $aslide;
+		
+        break;  
+    }
+
+}
+
+
+// $slideIndex = $_GET['slideIndex'];
+// $slide = $slides [$slideIndex];
+/*
+*@TODO
+ handle edge case 
+ security :Untrust user input 
+*/
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +67,7 @@
 					<div class="col-xl-12">
                     <div class="card">
 							<div class="card-header header-elements-inline">
-				                <h6 class="card-title">Create a Slide for the Slider </h6>
+				                <h6 class="card-title">Edit Slide Info </h6>
 								<div class="header-elements">
 									<div class="list-icons">
 				                		<a class="list-icons-item" data-action="collapse"></a>
@@ -47,29 +78,32 @@
 							</div>
 
 			                <div class="card-body">
-			                	<form action="slider_create_processor.php" method="post" enctype="multipart/form-data">
+			                	<form action="slider_edit_processor.php" method="post">
+
+                                <input name="id" type="text" class="form-control"  value="<?=$aslide->id?>" />
+                                <input name="uuid" type="text" class="form-control"  value="<?=$aslide->uuid?>" />
+
 									<div class="form-group">
 										<label>Title:</label>
-										<input name="title" type="text" class="form-control" placeholder="Write a title here">
+										<input name="title" type="text" class="form-control" placeholder="Write a title here" value="<?=$aslide->title?>" />
 									</div>
 
 									<div class="form-group">
 										<label>Caption:</label>
-										<input name="caption" type="text" class="form-control" placeholder="Write a caption here">
+										<input name="caption" type="text" class="form-control" placeholder="Write a caption here" value="<?=$aslide->caption?>" />
 									</div>
 
 									<div class="form-group">
 										<label>Alt:</label>
-										<input name="alt"type="text" class="form-control" placeholder="Write Alt here"></input>
+										<input name="alt"type="text" class="form-control" placeholder="Write Alt here" value="<?=$aslide->alt?>"/></input>
 									</div>
                                     <div class="form-group">
 	                                    <label>URL:</label>
-                                        <input name="url" type="url" class="form-control" placeholder="Enter a valid URL">
+                                        <input name="url" type="text" class="form-control" placeholder="Enter a valid URL" value="<?=$aslide->src?>"/>
                                     </div>
                                     <div class="form-group">
 	                                    <label>Upload a picture:</label>
-	                                    <input name="picture" type="file" class="form-control" placeholder="Picture">
-										<!-- <input name="document" type="file" class="form-control" placeholder="Picture"> -->
+	                                    <input name="upload" type="text" class="form-control" placeholder="Picture">
                                     </div>
 
 									<div class="d-flex justify-content-start align-items-center">
