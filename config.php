@@ -52,12 +52,15 @@ function upload($target, $dastination){
 $webroot = "http://class_15.test".DIRECTORY_SEPARATOR;
 
 $adminurl = $webroot."admin/layout_1/LTR/material/full".DIRECTORY_SEPARATOR; 
-$frontendurl = $webroot."frontend/view".DIRECTORY_SEPARATOR;
+$frontendurl = $webroot."frontend/portal".DIRECTORY_SEPARATOR;
 //$docroot = $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR;
 $docroot = $_SERVER['DOCUMENT_ROOT'];
 $datasource = $docroot.DIRECTORY_SEPARATOR."datasource".DIRECTORY_SEPARATOR;
 $partials = $docroot.DIRECTORY_SEPARATOR.'partials'.DIRECTORY_SEPARATOR;
 
 $uploads = $docroot.DIRECTORY_SEPARATOR."upload".DIRECTORY_SEPARATOR;
+$uploaded_assets = $webroot."upload".DIRECTORY_SEPARATOR;
 
-$datasource_driver = "JSON"; 
+
+
+$datasource_driver = "JSON"; // "Database, XML(optional), COOKIE/Session (learning only)

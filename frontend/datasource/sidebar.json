@@ -1,0 +1,17 @@
+[
+    {
+        "Category":[
+            "<a href='../portal/signin.html' style='text-decoration: none; color: black;'> <img src='../partial/logo/devices.png' alt='Flaticon device' style = 'height:20px; width: 20px;'> Electronic Devices</a>",
+            "<a href='../portal/signin.html' style='text-decoration: none; color: black;'> <img src='../partial/logo/food.png' alt='Flaticon food' style = 'height:20px; width: 20px;'> Groceries</a>",
+            "<a href='../portal/signin.html' style='text-decoration: none; color: black;'><img src='../partial/logo/shirt.png' alt='Flaticon shirt' style = 'height:20px; width: 20px;'> Fashion</a>",
+            "<a href='../portal/signin.html' style='text-decoration: none; color: black;'><img src='../partial/logo/skincare.png' alt='Flaticon skincare' style = 'height:20px; width: 20px;'> Health & Care</a>"
+        ]
+    },
+    {
+        "Settings & Privacy":[
+            "<a href='../portal/signin.html' style='text-decoration: none; color: black;'> <img src='../partial/logo/settings.png' alt='Flaticon settings' style = 'height:20px; width: 20px;'> Setting</a>",
+            "<a href='../portal/signin.html' style='text-decoration: none; color: black;'> <img src='../partial/logo/customer-service.png' alt='Flaticon customer-service' style = 'height:20px; width: 20px;'> Help center</a>",
+            "<a href='../portal/signin.html' style='text-decoration: none; color: black;'><img src='../partial/logo/logout.png' alt='Flaticon log-out' style = 'height:20px; width: 20px;'> Logout</a>"
+        ]
+    }
+]

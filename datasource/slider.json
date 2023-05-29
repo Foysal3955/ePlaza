@@ -1,1 +1,34 @@
-[{"id":1,"uuid":"aa1","src":"\/frontend\/view\/Samsung\/Samsung-Galaxy-S23-Ultra.jpg","alt":"Slider 1 alter","title":"Frist slide label","caption":"Some representative placeholder content for the first slide."},{"id":2,"uuid":"aa2","src":"\/frontend\/view\/Samsung\/Samsung-Galaxy-Z-Flip4.jpg","alt":"Slider 2 alter","title":"Secound slide label","caption":"Some representative placeholder content for the first slide."},{"id":3,"uuid":"aa3","src":"\/frontend\/view\/Samsung\/Samsung-Galaxy-A73-5G.jpg","alt":"Slider 3 alter","title":"Third slide label","caption":"Some representative placeholder content for the third slide."},{"id":4,"uuid":"aa4","src":"\/frontend\/view\/Samsung\/Samsung-Galaxy-A73-5G.jpg","alt":"Slider 3 alter","title":"Third slide label","caption":"Some representative placeholder content for the third slide."},{"id":5,"uuid":"aa5","src":"\/frontend\/view\/Samsung\/Samsung-Galaxy-A34-5G.jpg","alt":"Slider 3 alter","title":"Third slide label","caption":"Some representative placeholder content for the third slide."},{"id":"6","uuid":"aa6","src":"\/frontend\/view\/Samsung\/Samsung-Galaxy-A34-5G.jpg","alt":"Slider 3 alter111","title":"Third slide label","caption":"Some representative placeholder content for the third slide."},{"id":"7","uuid":"646bf971932da","src":"646e4cfbd9554_Samsung-Metro-313-Black-1.jpg","alt":"sadf","title":"jhsff","caption":"asdf"},{"id":"8","uuid":"646c5cd55f38b","src":"646e474de743a_Samsung-Galaxy-A04.jpg","alt":"scscSDC11","title":"Title 6","caption":"kljiojio"},{"id":"9","uuid":"646e205718365","src":"646e2a0e2fd81_Samsung-Galaxy-M33-5G-new.jpg","alt":"dsfsdfsdaca","title":"zfsdf aaaa","caption":"dsfsfsdfa aaaa"},{"id":"10","uuid":"646e25d73e476","src":"646e294bd33b3_Samsung-Galaxy-S22-Plus-image.jpg","alt":"sdfasf","title":"sdsada","caption":"sasda"},{"id":"11","uuid":"646e25ec34bb5","src":"646e4c905951d_Samsung-Galaxy-A33-5G.jpg","alt":"ddsds111","title":"dfsd111","caption":"dd111"},{"uuid":"646e26124c59c","src":"646e26124c37d_Samsung-Galaxy-Note-10-Lite.jpg","alt":"sdfsd","title":"dfsfds","caption":"dsfsdf","id":12}]
+[
+    {
+        "id": "8",
+        "uuid": "646c5cd55f38b",
+        "src": "646e474de743a_Samsung-Galaxy-A04.jpg",
+        "alt": "scscSDC11",
+        "title": "Title 6",
+        "caption": "kljiojio"
+    },
+    {
+        "id": "9",
+        "uuid": "646e205718365",
+        "src": "646e2a0e2fd81_Samsung-Galaxy-M33-5G-new.jpg",
+        "alt": "dsfsdfsdaca",
+        "title": "zfsdf aaaa",
+        "caption": "dsfsfsdfa aaaa"
+    },
+    {
+        "id": "11",
+        "uuid": "646e25ec34bb5",
+        "src": "646e4c905951d_Samsung-Galaxy-A33-5G.jpg",
+        "alt": "ddsds111",
+        "title": "dfsd111",
+        "caption": "dd111"
+    },
+    {
+        "uuid": "646e26124c59c",
+        "src": "646e26124c37d_Samsung-Galaxy-Note-10-Lite.jpg",
+        "alt": "sdfsd",
+        "title": "dfsfds",
+        "caption": "dsfsdf",
+        "id": 12
+    }
+]

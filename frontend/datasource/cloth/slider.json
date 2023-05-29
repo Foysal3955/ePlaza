@@ -1,0 +1,20 @@
+[
+    {
+        "src":"..\/portal\/public\/img\/cloths\/slider-image\/premium.webp",
+        "alt":"Cloth",
+        "title":"First slide",
+        "caption":"Some representative placeholder content for the third slide."
+    },
+    {
+        "src":"..\/portal\/public\/img\/cloths\/slider-image\/seamless.webp",
+        "alt":"Cloth",
+        "title":"Second slide",
+        "caption":"Some representative placeholder content for the third slide."
+    },
+    {
+        "src":"..\/portal\/public\/img\/cloths\/slider-image\/dark.webp",
+        "alt":"Cloth",
+        "title":"Third slide",
+        "caption":"Some representative placeholder content for the third slide."
+    }
+]

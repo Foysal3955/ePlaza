@@ -15,6 +15,10 @@ $slides = json_decode($dataSlides);
 </head>
 <body>
 <h1>All Slider</h1>
+
+<button type="button" onclick="print()" >Print</button>
+
+
 <table border="1">
 	<thead>
 		<tr>

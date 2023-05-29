@@ -1,7 +1,14 @@
-<?php include_once($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'config.php') ?>
 <?php
-$dataSlides = file_get_contents($datasource.'slider.json');
-$slides = json_decode($dataSlides);
+include_once($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'config.php');
+
+include_once($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR."vendor".DIRECTORY_SEPARATOR."autoload.php");
+
+use FOYSAL\CLASS15\Slider;
+
+$slider = new Slider();
+
+$slides = $slider->index();
+
 //dd($slides);
 ?>
 
@@ -87,9 +94,15 @@ endif
       <a href="slider_index_print.php" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
 	     <i class="icon-printer2"></i>
       </a>
+	  <a href="slider_download_xl.php" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
+        <i class="icon-file-spreadsheet"></i>
+      </a>
+	  <a href="slider_sendmail.php" class="btn btn-outline bg-blue text-black border-solid border-1 btn-icon rounded-round ">
+        <i class="icon-mailbox"></i>
+      </a>
 
         
-         (Delete | Restore) | Download XL 
+         (Delete | Restore) | 
 		
     
 		

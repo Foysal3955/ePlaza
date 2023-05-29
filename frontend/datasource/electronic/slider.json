@@ -1,0 +1,20 @@
+[
+    {
+        "src":"..\/portal\/public\/img\/devices\/slider-image\/special.webp",
+        "alt":"Device",
+        "title":"First slide",
+        "caption":"Some representative placeholder content for the third slide."
+    },
+    {
+        "src":"..\/portal\/public\/img\/devices\/slider-image\/flying-laptop-mobile-tablet.webp",
+        "alt":"Device",
+        "title":"Second slide",
+        "caption":"Some representative placeholder content for the third slide."
+    },
+    {
+        "src":"..\/portal\/public\/img\/devices\/slider-image\/air-condition.jpg",
+        "alt":"Device",
+        "title":"Third slide",
+        "caption":"Some representative placeholder content for the third slide."
+    }
+]

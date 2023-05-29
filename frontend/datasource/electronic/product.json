@@ -1,0 +1,58 @@
+[
+    {
+        "src":"..\/portal\/public\/img\/devices\/oppoa17k-sixteen_nine.webp",
+        "alt":"Device",
+        "title":"Oppo A17k",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"27790tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/devices\/d1.jpg",
+        "alt":"Device",
+        "title":"Asus",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"35000tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/devices\/d2.jpg",
+        "alt":"Device",
+        "title":"Samsung AC",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"47000tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/devices\/d3.webp",
+        "alt":"Device",
+        "title":"Gree AC",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"27790tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/devices\/d4.png",
+        "alt":"Device",
+        "title":"First slide",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"27790tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/devices\/d5.jpg",
+        "alt":"Device",
+        "title":"First slide",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"27790tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/devices\/d6.jpg",
+        "alt":"Device",
+        "title":"First slide",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"27790tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/devices\/d7.jpg",
+        "alt":"Device",
+        "title":"First slide",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"27790tk"
+    }
+]

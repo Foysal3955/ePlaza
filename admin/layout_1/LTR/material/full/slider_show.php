@@ -1,31 +1,21 @@
 
 <?php include_once($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'config.php') ?>
 <?php
-/**collet the intended ID */
-$id = $_GET['id'];
-// dd($id);
+use \FOYSAL\CLASS15\Slider;
+use \FOYSAL\CLASS15\Utility\Validator;
+use \FOYSAL\CLASS15\Utility\Utility;
+ 
+$id = Utility::sanitize($_GET['id']);
 
-/**communicate with data source and get the data for that id */
+if(!Validator::empty($id)){
+	$slider = new Slider();
 
-$dataSlides = file_get_contents($datasource.'slider.json');
-$slides = json_decode($dataSlides);
-$slide = null;
-foreach($slides as $key=>$aslide){
-    if($aslide->id == $id){
-        $slide = $aslide;
-		
-        break;  
-    }
-
+	$slide = $slider->show($id);
+	
+}else{ // REfactor using Session based message
+	dd("Id cannot be null or empty");
 }
 
-// $slideIndex = $_GET['slideIndex'];
-// $slide = $slides [$slideIndex];
-/*
-*@TODO
- handle edge case 
- security :Untrust user input 
-*/
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +64,7 @@ foreach($slides as $key=>$aslide){
 					<div class="col-sm-6 col-xl-3">
 						<div class="card">
 							<div class="card-img-actions mx-1 mt-1">
-								<img class="card-img img-fluid" src="<?=$aslide->src?>" alt="<?=$aslide->alt?>">
+								<img class="card-img img-fluid" src="<?=$uploaded_assets.$slide->src?>" alt="<?=$slide->alt?>">
 								<div class="card-img-actions-overlay card-img">
 									<!-- <a href="../../../../global_assets/images/placeholders/placeholder.jpg" class="btn btn-outline bg-white text-white -->
                                     <!-- border-white border-2 btn-icon rounded-round" data-popup="lightbox" rel="group"> -->
@@ -95,8 +85,8 @@ foreach($slides as $key=>$aslide){
 							<div class="card-body">
 								<div class="d-flex align-items-start flex-nowrap">
 									<div>
-										<h6 class="font-weight-semibold mr-2"><?=$aslide->title?></h6>
-										<span><?=$aslide->caption?></span>
+										<h6 class="font-weight-semibold mr-2"><?=$slide->title?></h6>
+										<span><?=$slide->caption?></span>
 									</div>
 									<div class="list-icons list-icons-extended ml-auto">
                                    

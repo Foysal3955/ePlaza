@@ -1,0 +1,58 @@
+[
+    {
+        "src":"..\/portal\/public\/img\/cloths\/c1.jpg",
+        "alt":"Cloth",
+        "title":"Top",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"790tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/cloths\/c2.jpg",
+        "alt":"Cloth",
+        "title":"Shirt",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"550tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/cloths\/c3.jpg",
+        "alt":"Cloth",
+        "title":"Shirt",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"470tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/cloths\/c4.jpg",
+        "alt":"Cloth",
+        "title":"Shirt",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"790tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/cloths\/c5.jpg",
+        "alt":"Cloth",
+        "title":"First slide",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"27790tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/cloths\/c6.jpeg",
+        "alt":"Cloth",
+        "title":"First slide",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"27790tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/cloths\/c7.jpg",
+        "alt":"Cloth",
+        "title":"First slide",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"27790tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/cloths\/c8.webp",
+        "alt":"Cloth",
+        "title":"First slide",
+        "caption":"Some representative placeholder content for the third slide.",
+        "price":"27790tk"
+    }
+]

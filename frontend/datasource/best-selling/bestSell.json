@@ -1,0 +1,26 @@
+[
+    {
+        "src":"..\/portal\/public\/img\/devices\/oppoa17k-sixteen_nine.webp",
+        "alt":"Device",
+        "title":"Oppo A17k",
+        "price":"27790tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/groceries\/g1.jpg",
+        "alt":"Grocery",
+        "title":"Fitness",
+        "price":"350tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/cloths\/c3.jpg",
+        "alt":"Cloth",
+        "title":"Shirt",
+        "price":"470tk"
+    },
+    {
+        "src":"..\/portal\/public\/img\/cosmetics\/image.webp",
+        "alt":"Grocery",
+        "title":"Skin care",
+        "price":"720tk"
+    }
+]
