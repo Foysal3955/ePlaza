@@ -1,36 +1,24 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'config.php') ?>
 <?php
-/**collet the intended ID */
-
-$id = $_GET['id'];
-
-// dd($id);
-
-/**communicate with data source and get the data for that id */
-
-$dataSlides = file_get_contents($datasource.'slider.json');
-$slides = json_decode($dataSlides);
-$slide = null;
-foreach($slides as $key=>$aslide){
-    if($aslide->id == $id){
-        $slide = $aslide;
-		
-        break;  
-    }
-
-}
+ use \FOYSAL\CLASS15\Slider;
+ use \FOYSAL\CLASS15\Utility\Validator;
+ use \FOYSAL\CLASS15\Utility\Utility;
+  
+ $id = Utility::sanitize($_GET['id']);
+ 
+ if(!Validator::empty($id)){
+	 $slider = new Slider();
+	 $slide = $slider->edit($id);
+	 
+ }else{ // REfactor using Session based message
+	 dd("Id cannot be null or empty");
+ }
 
 
-// $slideIndex = $_GET['slideIndex'];
-// $slide = $slides [$slideIndex];
-/*
-*@TODO
- handle edge case 
- security :Untrust user input 
-*/
+
+
+
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,32 +68,32 @@ foreach($slides as $key=>$aslide){
 			                <div class="card-body">
 			                	<form action="slider_edit_processor.php" method="post" enctype="multipart/form-data">
 
-                                <input name="id" type="text" class="form-control"  value="<?=$aslide->id?>" />
-                                <input name="uuid" type="text" class="form-control"  value="<?=$aslide->uuid?>" />
+                                <input name="id" type="text" class="form-control"  value="<?=$slide->id?>" />
+                                <input name="uuid" type="text" class="form-control"  value="<?=$slide->uuid?>" />
 
 									<div class="form-group">
 										<label>Title:</label>
-										<input name="title" type="text" class="form-control" placeholder="Write a title here" value="<?=$aslide->title?>" />
+										<input name="title" type="text" class="form-control" placeholder="Write a title here" value="<?=$slide->title?>" />
 									</div>
 
 									<div class="form-group">
 										<label>Caption:</label>
-										<input name="caption" type="text" class="form-control" placeholder="Write a caption here" value="<?=$aslide->caption?>" />
+										<input name="caption" type="text" class="form-control" placeholder="Write a caption here" value="<?=$slide->caption?>" />
 									</div>
 
 									<div class="form-group">
 										<label>Alt:</label>
-										<input name="alt"type="text" class="form-control" placeholder="Write Alt here" value="<?=$aslide->alt?>"/></input>
+										<input name="alt"type="text" class="form-control" placeholder="Write Alt here" value="<?=$slide->alt?>"/></input>
 									</div>
                                     <!-- <div class="form-group"> -->
 	                                    <!-- <label>URL:</label> -->
-                                        <!-- <input name="url" type="text" class="form-control" placeholder="Enter a valid URL" value="<?=$aslide->src?>"/> -->
+                                        <!-- <input name="url" type="text" class="form-control" placeholder="Enter a valid URL" value="<?=$slide->src?>"/> -->
                                     <!-- </div> -->
                                     <div class="form-group">
 	                                    <label>Upload a picture:</label>
 	                                    <input name="picture" type="file" class="form-control" placeholder="Choose a Picture">
-										<img src= <?= $webroot."upload/".$aslide->src?> style = "width:100px;height:100px" >
-										<input name="old_picture" type="text" class="form-control"  value="<?=$aslide->src?>" />
+										<img src= <?= $webroot."upload/".$slide->src?> style = "width:100px;height:100px" >
+										<input name="old_picture" type="text" class="form-control"  value="<?=$slide->src?>" />
                                     </div>
 
 									<div class="d-flex justify-content-start align-items-center">

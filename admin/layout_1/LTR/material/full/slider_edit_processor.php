@@ -1,8 +1,12 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'config.php') ?>
 <?php
 
-// d($_POST);
-// dd($_FILES);
+use \FOYSAL\CLASS15\Slider;
+use \FOYSAL\CLASS15\Utility\Utility;
+
+
+
+
 $src = null;
 $new_picture = null;
 $old_picture = null;
@@ -32,75 +36,27 @@ if(array_key_exists('picture', $_FILES) && !empty($_FILES['picture']['name'])){
    
   
 } 
-
-
-
-/**
- * sanitize 
- * validation 
- * 
- * image processing
- * store : a json file 
- * give apporpriate massge to user  
- */
-//$id = "11";
-$uuid = $_POST['uuid'];
-$id = $_POST['id'];
-
-
-
 $src = $new_picture ?? $old_picture;
 
+// sanitize
+// validation
+// image processing
+
+// store : as json data to json file
+$id = Utility::sanitize($_POST['id']);
+
+$slider = new Slider();
+$slide = $slider->find($id);
+
+$slide->alt = Utility::sanitize($_POST['alt']);
+$slide->title = Utility::sanitize($_POST['title']);
+$slide->caption = Utility::sanitize($_POST['caption']);
+$slide->src = $src;
+
+$result = $slider->update($slide);
 
 
 
-
-$alt = $_POST['alt'];
-$title = $_POST['title'];
-$caption = $_POST['caption'];
-
-
-
- $slide = [
-
-          'id'=>$id,
-          'uuid'=>$uuid,
-          'src'=>$src,
-          'alt'=>$alt,
-          'title'=>$title,
-          'caption'=>$caption
-        ];
-
-
-$dataSlides = file_get_contents($datasource.'slider.json');
-$slides = json_decode($dataSlides);
-
-foreach($slides as $key=>$aslide){
-    if($aslide->id == $id)
-    break;
-
-
-}
- 
-//d($slides);
-//d($slide);
-
-$slides [$key] = (object) $slide;
-
-//dd($slides);
-
-$data_slide = json_encode($slides); 
-//dd($data_slide);
-
-
-
-if(file_exists($datasource."slider.json")){
-
-    $result = file_put_contents($datasource."slider.json",$data_slide);
-
- }else{
-      echo "File not found";
-  }
 
   if($result){
     $message = "Data is  updated Sucessfull";

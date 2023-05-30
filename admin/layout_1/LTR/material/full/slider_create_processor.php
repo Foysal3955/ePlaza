@@ -1,95 +1,44 @@
-<?php include_once($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'config.php') ?>
-<?php
+<?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
+<?php //phpinfo() 
 
 
-// dd($uploads);
+use \FOYSAL\CLASS15\Slider;
+use \FOYSAL\CLASS15\Utility\Utility;
 
-$fileName = uniqid()."_".$_FILES['picture']['name']; // if you want to keep th ename as is 
-$target = $_FILES['picture']['tmp_name']; // if you want to keep th ename as is 
-$destination = $uploads.$fileName;
-$src = null;
-if(upload($target, $destination)){
-  $src = $fileName;
-}
+use \Intervention\Image\ImageManager;
 
-// dd($filename);
-// move_uploaded_file($target, $destination);
+$manager = new ImageManager(['driver' => 'imagick']);
 
+$filename = uniqid()."_".$_FILES['picture']['name'];
 
-/**
- * sanitize 
- * validation 
- * 
- * image processing
- * store : a json file 
- * give apporpriate massge to user  
- */
-//$id = "11";
-//$uuid = "hgsdf";
-// $src = $_POST['url'];
-$alt = $_POST['alt'];
-$title = $_POST['title'];
-$caption = $_POST['caption'];
-
-
-
- $slide = [
-          
-          'uuid'=>uniqid(),
-          'src'=>$src,
-          'alt'=>$alt,
-          'title'=>$title,
-          'caption'=>$caption
-        ];
-
-$currentUniqueId = null;
-
-
-// dd($slide);
-
-$dataSlides = file_get_contents($datasource.'slider.json');
-$slides = json_decode($dataSlides);
-
-if(count($slides) > 0){
-
-$ids = [];
-//finding unique ids 
-foreach($slides as $aslide){
-  $ids[] = $aslide->id;
-
-}
-
-  sort($ids);
-  $lastIndex = (count($ids)-1);
-  $highestId = $ids[$lastIndex];
-  $currentUniqueId = $highestId+1;
-
-}else{
-  $currentUniqueId = 1;
-
+try{
+    $img = $manager->make($_FILES['picture']['tmp_name'])
+                    ->resize(30, 20)
+                    ->save($uploads.$filename);
+    $src = $filename ;
+}catch(Intervention\Image\Exception\NotWritableException $e){
+    dd($e);
+}catch(Exception $e){
+    dd($e);
 }
 
 
-
-
-$slide['id'] = $currentUniqueId;
-
-
-$slides [] = (object) $slide;
-$data_slide = json_encode($slides); 
+$slider = new Slider();
 
 
 
-if(file_exists($datasource."slider.json")){
+$slider->alt = Utility::sanitize($_POST['alt']);
+$slider->title = Utility::sanitize($_POST['title']);
+$slider->caption = Utility::sanitize($_POST['caption']);
+$slider->src = $src;
 
-    $result = file_put_contents($datasource."slider.json",$data_slide);
+$result = $slider->store($slider);
 
- }else{
-      echo "File not found";
-  }
 
-  if($result){
 
+if ($result) {
     redirect("slider_index.php");
-
-  }
+} else {
+    echo "Data is not stored";
+}
+?>

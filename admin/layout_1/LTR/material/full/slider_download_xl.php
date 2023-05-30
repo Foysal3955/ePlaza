@@ -54,7 +54,7 @@ foreach($sliders as $key=> $slider){
 }
   //set appropite header 
   header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-  header('Content-Disposition: attachment;filename="example.xlsx"');
+  header('Content-Disposition: attachment;filename="example.xlxs"');
   header('Cache-Control: max-age=0');
 
 $writer = new Xlsx($spreadsheet);
